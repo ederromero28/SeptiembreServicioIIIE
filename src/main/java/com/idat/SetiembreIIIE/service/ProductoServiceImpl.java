@@ -17,31 +17,31 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public void guardar(Producto producto) {
 		// TODO Auto-generated method stub
-		productoRepository.guardar(producto);
+		productoRepository.save(producto);
 	}
 
 	@Override
 	public void actualizar(Producto producto) {
 		// TODO Auto-generated method stub
-		productoRepository.actualizar(producto);
+		productoRepository.saveAndFlush(producto);
 	}
 
 	@Override
 	public void eliminar(Integer id) {
 		// TODO Auto-generated method stub
-		productoRepository.eliminar(id);
+		productoRepository.deleteById(id);
 	}
 
 	@Override
 	public List<Producto> listar() {
 		// TODO Auto-generated method stub
-		return productoRepository.listar();
+		return productoRepository.findAll();
 	}
 
 	@Override
 	public Producto obtener(Integer id) {
 		// TODO Auto-generated method stub
-		return productoRepository.obtener(id);
+		return productoRepository.findById(id).orElse(null);
 	}
 
 }
