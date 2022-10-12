@@ -50,7 +50,6 @@ public class Producto {
 	private List<Cliente> clientes = new ArrayList<>();
 	
 	
-	
 	public Producto() {
 		
 	}

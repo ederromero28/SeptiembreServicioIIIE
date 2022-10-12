@@ -34,7 +34,7 @@ public class ProductoController {
 		return new ResponseEntity<Void> (HttpStatus.CREATED) ;
 	}
 	
-	@RequestMapping(path = "/listar/{id}", method = RequestMethod.GET)
+	@RequestMapping(path = "/buscarxid/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> obtenerPorId(@PathVariable Integer id){
 		
 		Producto producto = service.obtener(id);
@@ -44,7 +44,6 @@ public class ProductoController {
 		} else {
 			return new ResponseEntity<>("¡PRODUCTO NO ENCONTRADO!", HttpStatus.NOT_FOUND);
 		}
-		
 	}
 	
 	@RequestMapping(path = "/editar", method = RequestMethod.PUT)
@@ -71,7 +70,6 @@ public class ProductoController {
 		} else {
 			return new ResponseEntity<>("¡PRODUCTO NO ENCONTRADO PARA ELIMINAR!", HttpStatus.NOT_FOUND);
 		}
-		
 	}
 	
 }
