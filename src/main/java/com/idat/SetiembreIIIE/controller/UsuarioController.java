@@ -34,8 +34,6 @@ public class UsuarioController {
         } else {
             return new ResponseEntity<>("¡Contraseña invalida!", HttpStatus.NOT_FOUND);
         }
-        
-        
     }
 
 }
