@@ -24,7 +24,6 @@ public class Proveedor {
 	}
 
 	public Proveedor(Integer idProveedor, String proveedor, String direccion) {
-
 		this.idProveedor = idProveedor;
 		this.proveedor = proveedor;
 		this.direccion = direccion;

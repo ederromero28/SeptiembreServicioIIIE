@@ -29,8 +29,17 @@ public class Cliente {
 	@OneToMany(mappedBy = "cliente")
 	private List<Item> items = new ArrayList<>();
 	
+	public Cliente() {
+        
+    }
 	
-	public Integer getIdCliente() {
+    public Cliente(Integer idCliente, String cliente, String celular) {
+        this.idCliente = idCliente;
+        this.cliente = cliente;
+        this.celular = celular;
+    }
+
+    public Integer getIdCliente() {
 		return idCliente;
 	}
 	public void setIdCliente(Integer idCliente) {

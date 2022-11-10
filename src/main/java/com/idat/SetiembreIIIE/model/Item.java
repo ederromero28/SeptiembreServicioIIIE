@@ -24,13 +24,23 @@ public class Item {
 	@JoinColumn(
 			name = "id_cliente",
 			nullable =  false,
-			unique = true,
 			foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key(id_cliente) references clientes (id_cliente)")
 	)
 	private Cliente cliente;
 	
+	public Item() {
+    }
 	
-	public Integer getIdItem() {
+	
+    public Item(Integer idItem, String item, Integer cantidad, Double total, Cliente cliente) {
+        this.idItem = idItem;
+        this.item = item;
+        this.cantidad = cantidad;
+        this.total = total;
+        this.cliente = cliente;
+    }
+
+    public Integer getIdItem() {
 		return idItem;
 	}
 	public void setIdItem(Integer idItem) {
@@ -54,5 +64,13 @@ public class Item {
 	public void setTotal(Double total) {
 		this.total = total;
 	}
+	
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 	
 }
